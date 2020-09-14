@@ -5,10 +5,13 @@ import {Provider} from 'react-redux';
 import {store, Pstore} from './store';
 import React from 'react';
 
-const App = () => {
+function App(){
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={Pstore}>
+      <PersistGate 
+        loading={null}
+        persistor={Pstore}
+      >
         <AppStack />
       </PersistGate>
     </Provider>
